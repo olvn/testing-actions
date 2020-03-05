@@ -9,6 +9,7 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  resolves: [ Lint ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -34,4 +35,5 @@ jobs:
         
     - name: Black Code Formatter
       uses: lgeiger/black-action@v1.0.1
+      args: ". --check"
 
